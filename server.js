@@ -5,10 +5,10 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(__dirname + '/dist/angular-heroes'));
+app.use(express.static(__dirname + '/catalogo/dist/angular-heroes'));
 
 app.get('/*',(req,res)=>{
-    res.sendFile(__dirname + 'dist/angular-heroes/index.html');
+    res.sendFile(__dirname + '/catalogo/dist/angular-heroes/index.html');
 });
 
 app.listen(PORT, () => {
